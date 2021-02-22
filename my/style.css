@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.app{
+    display: flex;
+    height: 100vh;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.time_select,
+.sound_tracker,
+.play_container
+{
+    height: 80%;
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 100;
+    
+}
+.play_container{
+    position: relative;
+}
+.play_container svg{
+    position:absolute;
+    height: 50%;
+    top: 50%;
+    left:50%;
+    transform:  translate(-50%,-50%) rotate(-90deg);
+    pointer-events: none;
+}
+.time_display{
+    position: absolute;
+    color: white;
+    font-size: 50px;
+    bottom:10%;
+}
+
+video{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+}
+.time_select button,
+.sound_tracker button{
+    background: none;
+    border: 2px solid white;
+    color: white;
+    width: 30%;
+    height: 10%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all .5s ease;
+}
+.time_select button:hover{
+    color: black;
+    background: white;
+    border: 2px solid black;
+}
+.sound_tracker button{
+    border:none;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    padding:30px;
+}
+.sound_tracker button:nth-child(1){
+    background: #4972a1;
+}
+.sound_tracker button:nth-child(2){
+    background: #a14f49;
+}
+
+.sound_tracker button img{
+    height: 100%;
+}
