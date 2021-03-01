@@ -15,7 +15,6 @@ const app=()=>{
     let fakeDuration=600;
     outline.style.strokeDasharray=outlineLength//Делит окружность на заведенную длину.
     outline.style.strokeDashoffset=outlineLength
-
     //Pick different sounds
     sounds.forEach(sound=>{
         sound.addEventListener('click',function(){
@@ -35,7 +34,6 @@ const app=()=>{
             time.textContent=`${Math.floor(fakeDuration/60)}:${Math.floor(fakeDuration%60)}`
         })
     })
-
     console.log(song);
     const checkPlaying= song=>{
         if (song.paused){
@@ -70,5 +68,4 @@ const app=()=>{
         }
     }
 }
-
 app()
